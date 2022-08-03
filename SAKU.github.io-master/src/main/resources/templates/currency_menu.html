@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{mainlayout :: main-fragment(~{::#currency-content},
+                                                 ~{::#currency-static-resource})}">
+
+<head>
+
+<!--        <script src="jsdevextreme/globalize/date.js"></script>-->
+    <th:block id="currency-static-resource">
+        <script src="view/bower_components/js/currency.js"></script>
+    </th:block>
+
+</head>
+<body><div id="currency-content" >
+    <h3>Nilai Mata Uang Asing</h3>
+    <div id="buttoncurrency"></div>
+    <div id="buttoncurrencymanual"></div>
+    <div id="popup2"></div>
+
+    <div id="Datadtlcur"></div>
+</div>
+
+</div>
+</body>
+
+</body>
+
+</html>

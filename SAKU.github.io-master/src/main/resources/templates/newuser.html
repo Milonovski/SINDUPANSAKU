@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{mainlayout :: main-fragment(~{::#register-content},
+                                                 ~{::#newuser-static-resource})}">
+<head>
+
+<head>
+
+<!--    <script src="jsdevextreme/globalize/date.js"></script>-->
+    <th:block id="newuser-static-resource">
+               <script src="view/bower_components/js/register.js"></script>
+    </th:block>
+
+
+<!--    <script src="view/bower_components/js/dashboard.js"></script>-->
+
+</head>
+<body class="dx-viewport"><div id ="register-content">
+    <div class="title-container">
+        <h3 style="padding: 0px 0px 0px 250px;">Pendaftaran User Baru</h3>
+        <div id="forminsert"></div>
+        <!--                <div id="currencybutton"></div>-->
+
+    </div>
+
+</div>
+
+</body>
+</html>

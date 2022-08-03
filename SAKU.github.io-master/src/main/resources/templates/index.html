@@ -1,0 +1,157 @@
+<!--<%@page contentType="text/html" pageEncoding="UTF-8"%>-->
+<!--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>-->
+<!--<%@ page import="java.sql.*,java.net.*,java.text.*,java.util.*" %>-->
+<!--<%@ page import="java.sql.*" %> -->
+<!--<%@ page import="java.io.*" %> -->
+<!--<%@ include file="proses/conn.jsp" %>-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Refresh" content="0; url='/Dashboard'" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistem Akutansi PAN</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>Login</body>
+
+<!--<body id="bodylogin">-->
+<!--    <%-->
+<!--        Connection con = null;-->
+<!--        try {-->
+<!--            session.removeAttribute("user");-->
+<!--            session.removeAttribute("password");-->
+<!--            session.removeAttribute("jenis");-->
+<!--            session.removeAttribute("patch");-->
+<!--            Class.forName("com.mysql.jdbc.Driver").newInstance();-->
+<!--            con = DriverManager.getConnection(url, user, password);-->
+<!--            Statement staMain = con.createStatement();-->
+<!--            ResultSet rcsGeneral;-->
+<!--            rcsGeneral = staMain.executeQuery("select IdDocument from NSI.TBDOCUMENT where Defunct = 0 order by " +-->
+<!--              "UrutanDocument");-->
+
+<!--            while (rcsGeneral.next()) {-->
+<!--              session.removeAttribute(rcsGeneral.getString("IdDocument").trim());-->
+<!--            }-->
+
+<!--            rcsGeneral.close();-->
+<!--            staMain.close();-->
+<!--            session.invalidate();-->
+<!--            response.setHeader("Cache-Control","no-cache");-->
+<!--            response.setHeader("Cache-Control","no-store");-->
+<!--            response.setDateHeader("Expires", 0);-->
+<!--            response.setHeader("Pragma","no-cache");-->
+<!--        }catch (Exception e) {-->
+<!--            out.println("Error Message: Exception: " + e.getMessage());-->
+<!--        }catch (Throwable t) {-->
+<!--            out.println("Error Message: Throwable: " + t.getMessage());-->
+<!--        }finally {-->
+<!--            con.close();-->
+<!--        }-->
+<!--    %>-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4 col-md-offset-4">-->
+<!--                <div class="login-panel panel panel-white">-->
+<!--                    <div class="panel-heading">-->
+<!--                        <table>-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    <img src="img/PLANA.png" >-->
+<!--                                </td>-->
+
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                    <div class="panel-body">-->
+<!--                        <form  name="frmLogin" method="post" action="proses/prosesLogin.jsp" >-->
+<!--                            <fieldset>-->
+<!--                                <div class="form-group">-->
+<!--                                    <input class="form-control" placeholder="Username" name="usr"  autofocus>-->
+<!--                                </div>-->
+<!--                                <div class="form-group">-->
+<!--                                    <input class="form-control" placeholder="Password" name="psw" type="password" value="">-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; <div class="checkbox">-->
+<!--                                    <label>-->
+<!--                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me-->
+<!--                                    </label>-->
+<!--                                </div> &ndash;&gt;-->
+<!--                                &lt;!&ndash; Change this to a button or input when using this as a form &ndash;&gt;-->
+<!--                                <div class="form-center">-->
+<!--                                    <input type="submit" value="Login"/>-->
+<!--                                </div>-->
+<!--                            </fieldset>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                    <div class="panel-footer">-->
+<!--                        <small>-->
+<!--                        </small>-->
+<!--                        <table>-->
+<!--                            <tr>-->
+<!--                                <td width="40">-->
+<!--                                    Server-->
+<!--                                </td>-->
+<!--                                <td width="8"> : </td>-->
+<!--                                <td>-->
+<!--                                    <%=request.getServerName()%>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>-->
+<!--                                    Client-->
+<!--                                </td>-->
+<!--                                <td> : </td>-->
+<!--                                <td>-->
+<!--                                    <%=request.getRemoteHost()%>-->
+<!--                                </td>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; jQuery &ndash;&gt;-->
+<!--    <script src="bower_components/jquery/dist/jquery.min.js"></script>-->
+
+<!--    &lt;!&ndash; Bootstrap Core JavaScript &ndash;&gt;-->
+<!--    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+
+<!--    &lt;!&ndash; Metis Menu Plugin JavaScript &ndash;&gt;-->
+<!--    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>-->
+
+<!--    &lt;!&ndash; Custom Theme JavaScript &ndash;&gt;-->
+<!--    <script src="dist/js/sb-admin-2.js"></script>-->
+
+<!--</body>-->
+
+</html>
